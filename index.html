@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aditya Bobde | Supply Chain Portfolio</title>
+
+  <title>Aditya Bobde | Supply Chain Analytics Portfolio</title>
+  <meta name="description" content="Portfolio of Aditya Bobde, a supply chain and logistics professional focused on operations visibility, analytics, dashboards, SAP workflows, and process automation." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
@@ -13,6 +15,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -20,13 +23,62 @@
       color: #f0f0f0;
       font-family: 'Barlow', sans-serif;
       line-height: 1.6;
-      padding: 48px 24px;
     }
 
     .page {
       width: 100%;
-      max-width: 880px;
+      max-width: 980px;
       margin: 0 auto;
+      padding: 34px 24px 56px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1a1a1a;
+      margin: -34px -24px 56px;
+      padding: 18px 24px;
+    }
+
+    .nav-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f2f2f2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: #777;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
     }
 
     .label {
@@ -36,25 +88,26 @@
       letter-spacing: 0.22em;
       color: #666;
       text-transform: uppercase;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
     .divider-top {
-      width: 40px;
+      width: 42px;
       height: 1px;
       background: #333;
-      margin-bottom: 42px;
+      margin-bottom: 44px;
     }
 
     .headline {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(44px, 8vw, 82px);
+      font-size: clamp(48px, 8vw, 92px);
       font-weight: 800;
-      line-height: 0.95;
+      line-height: 0.92;
       color: #f4f4f4;
-      letter-spacing: -0.02em;
-      margin-bottom: 36px;
+      letter-spacing: -0.025em;
+      margin-bottom: 34px;
       text-transform: uppercase;
+      max-width: 900px;
     }
 
     .headline span {
@@ -62,15 +115,15 @@
     }
 
     .intro {
-      max-width: 720px;
+      max-width: 760px;
       font-size: 18px;
       color: #b0b0b0;
       line-height: 1.8;
-      margin-bottom: 40px;
+      margin-bottom: 38px;
     }
 
     .intro strong {
-      color: #e8e8e8;
+      color: #eeeeee;
       font-weight: 600;
     }
 
@@ -96,51 +149,31 @@
     }
 
     .btn:hover {
-      border-color: #555;
+      border-color: #666;
       color: #fff;
+      transform: translateY(-1px);
     }
 
-    .divider-mid {
-      width: 100%;
-      height: 1px;
-      background: #1e1e1e;
-      margin: 48px 0 36px;
+    .btn.primary {
+      background: #f0f0f0;
+      color: #0a0a0a;
+      border-color: #f0f0f0;
     }
 
-    .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 34px;
-      font-weight: 800;
-      line-height: 1;
-      color: #f0f0f0;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .body-block {
-      margin-bottom: 28px;
-    }
-
-    .body-block p {
-      font-size: 16px;
-      line-height: 1.75;
-      color: #b0b0b0;
-    }
-
-    .body-block strong {
-      color: #e8e8e8;
-      font-weight: 600;
+    .btn.primary:hover {
+      background: #ffffff;
+      color: #000;
     }
 
     .stats-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1px;
       background: #1a1a1a;
       border: 1px solid #1a1a1a;
       border-radius: 4px;
       overflow: hidden;
-      margin: 36px 0;
+      margin: 38px 0 62px;
     }
 
     .stat {
@@ -166,19 +199,54 @@
       line-height: 1.5;
     }
 
+    .divider-mid {
+      width: 100%;
+      height: 1px;
+      background: #1e1e1e;
+      margin: 58px 0 38px;
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 0.96;
+      color: #f0f0f0;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      letter-spacing: -0.015em;
+    }
+
+    .body-block {
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    .body-block p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #b0b0b0;
+    }
+
+    .body-block strong {
+      color: #e8e8e8;
+      font-weight: 600;
+    }
+
     .callout {
       border-left: 2px solid #2a2a2a;
-      padding-left: 20px;
+      padding-left: 22px;
       margin: 42px 0;
+      max-width: 820px;
     }
 
     .callout p {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 26px;
-      font-weight: 700;
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 800;
       color: #d8d8d8;
-      line-height: 1.25;
-      letter-spacing: 0.01em;
+      line-height: 1.08;
+      letter-spacing: 0.005em;
       text-transform: uppercase;
     }
 
@@ -186,14 +254,24 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
-      margin-top: 24px;
+      margin-top: 28px;
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .card {
       background: #0f0f0f;
       border: 1px solid #1f1f1f;
-      border-radius: 4px;
-      padding: 22px;
+      border-radius: 5px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #333;
+      transform: translateY(-2px);
     }
 
     .card-label {
@@ -202,44 +280,142 @@
       letter-spacing: 0.16em;
       color: #555;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .card h3 {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 26px;
-      line-height: 1.05;
+      font-size: 28px;
+      line-height: 1.02;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       color: #f0f0f0;
     }
 
     .card p {
       color: #aaa;
       font-size: 15px;
-      line-height: 1.65;
+      line-height: 1.68;
+      margin-bottom: 12px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .mini-title {
+      color: #e8e8e8;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 18px;
+      margin-bottom: 6px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      border: 1px solid #2a2a2a;
+      border-radius: 3px;
+      padding: 6px 9px;
+      color: #777;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .quote-block {
+      margin-top: 34px;
+      padding: 26px;
+      background: #0f0f0f;
+      border: 1px solid #1f1f1f;
+      border-radius: 5px;
+    }
+
+    .quote-block p {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      color: #d8d8d8;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .contact-box {
+      background: #0f0f0f;
+      border: 1px solid #1f1f1f;
+      border-radius: 5px;
+      padding: 28px;
+      margin-top: 28px;
+    }
+
+    .contact-box a {
+      color: #e8e8e8;
+      text-decoration: none;
+      border-bottom: 1px solid #444;
+    }
+
+    .contact-box a:hover {
+      color: #fff;
+      border-bottom-color: #fff;
     }
 
     .footer {
-      margin-top: 60px;
+      margin-top: 64px;
       padding-top: 28px;
       border-top: 1px solid #1a1a1a;
       color: #666;
       font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    @media (max-width: 700px) {
-      body {
-        padding: 36px 20px;
+    @media (max-width: 850px) {
+      .stats-row,
+      .grid,
+      .grid.three {
+        grid-template-columns: 1fr;
       }
 
-      .stats-row,
-      .grid {
-        grid-template-columns: 1fr;
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 28px 20px 46px;
+      }
+
+      .nav {
+        margin: -28px -20px 46px;
+        padding: 16px 20px;
       }
 
       .headline {
         font-size: 48px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .card {
+        padding: 22px;
       }
     }
   </style>
@@ -248,50 +424,81 @@
 <body>
   <main class="page">
 
-    <div class="label">Supply Chain / Logistics / Data</div>
-    <div class="divider-top"></div>
-
-    <h1 class="headline">
-      Operations are messy.<br>
-      <span>Visibility makes them manageable.</span>
-    </h1>
-
-    <p class="intro">
-      I’m <strong>Aditya Bobde</strong>, a supply chain and logistics professional building at the intersection of
-      warehouse operations, shipment coordination, data analytics, and process automation.
-    </p>
-
-    <div class="button-row">
-      <a class="btn" href="#projects">View Projects</a>
-      <a class="btn" href="#blog">Read Blog</a>
-      <a class="btn" href="#contact">Contact</a>
-    </div>
-
-    <div class="stats-row">
-      <div class="stat">
-        <div class="stat-number">4+</div>
-        <div class="stat-label">Years in supply chain and logistics operations</div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="brand">Aditya Bobde</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#stack">Stack</a>
+          <a href="#proof">Proof</a>
+          <a href="#projects">Projects</a>
+          <a href="#vision">Vision</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
-      <div class="stat">
-        <div class="stat-number">SAP</div>
-        <div class="stat-label">S/4HANA, Excel, Power BI and reporting exposure</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">GLOBAL</div>
-        <div class="stat-label">Canada, India, Netherlands and Europe career direction</div>
-      </div>
-    </div>
+    </nav>
 
-    <div class="divider-mid"></div>
+    <section id="top">
+      <div class="label">Supply Chain / Logistics / Data</div>
+      <div class="divider-top"></div>
+
+      <h1 class="headline">
+        I turn operational movement<br>
+        <span>into execution visibility.</span>
+      </h1>
+
+      <p class="intro">
+        I’m <strong>Aditya Bobde</strong>, a supply chain and logistics professional building practical systems
+        for shipment visibility, inventory control, warehouse reporting, and process automation.
+      </p>
+
+      <div class="button-row">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="#vision">View Career Direction</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Years across logistics, supply chain and warehouse operations</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">SAP</div>
+          <div class="stat-label">S/4HANA, ERP workflows and operational reporting exposure</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">BI</div>
+          <div class="stat-label">Excel, Power BI, SQL and KPI dashboard direction</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">GLOBAL</div>
+          <div class="stat-label">Canada, India, Netherlands and Europe career focus</div>
+        </div>
+      </div>
+    </section>
 
     <section id="about">
+      <div class="divider-mid"></div>
+
       <div class="label">About / Professional Identity</div>
-      <h2 class="section-title">I build operational clarity.</h2>
+      <h2 class="section-title">Built from ground-level operations.</h2>
 
       <div class="body-block">
         <p>
-          My experience spans logistics coordination, warehouse operations, shipment visibility,
-          inventory movement, reporting, and process support across fast-moving operational environments.
+          My experience comes from real operational environments where shipments move, inventory shifts,
+          warehouse priorities change, and reporting has to be accurate enough to support decisions quickly.
+        </p>
+      </div>
+
+      <div class="body-block">
+        <p>
+          I work at the intersection of <strong>logistics coordination, warehouse execution, data reporting,
+          SAP workflows, Excel analysis, and process improvement</strong>. My portfolio is built to show not only
+          what I have done, but how I think through operational problems.
         </p>
       </div>
 
@@ -300,103 +507,261 @@
       </div>
     </section>
 
-    <div class="divider-mid"></div>
+    <section id="stack">
+      <div class="divider-mid"></div>
+
+      <div class="label">Execution Stack / Skills in Context</div>
+      <h2 class="section-title">The stack behind the work.</h2>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-label">Operations</div>
+          <h3>Warehouse Flow</h3>
+          <p>Shipment coordination, inventory movement, order flow, daily execution support, and operational follow-up.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Data</div>
+          <h3>Reporting Systems</h3>
+          <p>Excel reporting, Power BI dashboards, SQL learning path, KPI visibility, variance checks, and trend analysis.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Systems</div>
+          <h3>SAP / ERP Context</h3>
+          <p>SAP S/4HANA exposure, ERP-based workflows, transaction accuracy, system data, and process documentation.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Automation</div>
+          <h3>Repeatable Workflows</h3>
+          <p>Trackers, dashboard logic, content systems, AI-assisted documentation, and structured portfolio management.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof">
+      <div class="divider-mid"></div>
+
+      <div class="label">Proof of Value / Why This Matters</div>
+      <h2 class="section-title">Operational visibility is not cosmetic.</h2>
+
+      <div class="grid three">
+        <div class="card">
+          <div class="card-label">Value / Speed</div>
+          <h3>Faster Follow-Up</h3>
+          <p>Clear tracking helps teams identify what needs attention before problems turn into larger delays.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Value / Accuracy</div>
+          <h3>Cleaner Decisions</h3>
+          <p>Better data structure reduces guesswork across shipment tracking, inventory review, and warehouse reporting.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Value / Execution</div>
+          <h3>Ground Reality</h3>
+          <p>Hands-on operations experience helps connect dashboard insights with what actually happens on the floor.</p>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <p>The real gap is not always a lack of effort. Sometimes it is a lack of visibility.</p>
+      </div>
+    </section>
 
     <section id="projects">
+      <div class="divider-mid"></div>
+
       <div class="label">Projects / Case Studies</div>
-      <h2 class="section-title">Portfolio Projects</h2>
+      <h2 class="section-title">Portfolio systems in progress.</h2>
 
       <div class="grid">
         <div class="card">
-          <div class="card-label">Project / Logistics Visibility</div>
+          <div class="card-label">Project / Logistics Visibility System</div>
           <h3>Logistics Performance Dashboard</h3>
-          <p>A dashboard concept for tracking shipment volume, delivery delays, carrier performance, and operational bottlenecks.</p>
+
+          <div class="mini-title">Problem</div>
+          <p>Shipment delays are difficult to manage when updates are scattered across emails, trackers, and ERP data.</p>
+
+          <div class="mini-title">System</div>
+          <p>A dashboard concept to track shipment volume, delay reasons, carrier performance, and weekly operational trends.</p>
+
+          <div class="mini-title">Output</div>
+          <p>Clearer bottleneck visibility and better follow-up decisions for logistics teams.</p>
+
+          <div class="tag-row">
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">SAP Context</span>
+          </div>
         </div>
 
         <div class="card">
-          <div class="card-label">Project / Inventory Planning</div>
+          <div class="card-label">Project / Inventory Planning System</div>
           <h3>Inventory Replenishment Analysis</h3>
-          <p>A business case focused on stockout risk, reorder signals, supplier delays, and inventory decision-making.</p>
+
+          <div class="mini-title">Problem</div>
+          <p>Inventory issues become expensive when stockout risk, reorder signals, and supplier delays are not visible early.</p>
+
+          <div class="mini-title">System</div>
+          <p>A replenishment analysis model focused on inventory movement, reorder triggers, and supply risk indicators.</p>
+
+          <div class="mini-title">Output</div>
+          <p>Better inventory planning visibility and stronger decision support for replenishment actions.</p>
+
+          <div class="tag-row">
+            <span class="tag">Excel</span>
+            <span class="tag">Forecasting</span>
+            <span class="tag">Inventory</span>
+            <span class="tag">Analytics</span>
+          </div>
         </div>
 
         <div class="card">
-          <div class="card-label">Project / Warehouse Operations</div>
+          <div class="card-label">Project / Warehouse Operations System</div>
           <h3>Warehouse Productivity Tracker</h3>
-          <p>A tracker concept for daily output, operational errors, bottlenecks, and productivity visibility.</p>
+
+          <div class="mini-title">Problem</div>
+          <p>Daily warehouse performance is difficult to improve without visibility into output, errors, and bottlenecks.</p>
+
+          <div class="mini-title">System</div>
+          <p>A tracker concept for daily productivity, operational exceptions, workload patterns, and team-level reporting.</p>
+
+          <div class="mini-title">Output</div>
+          <p>A clearer view of performance trends and opportunities for operational improvement.</p>
+
+          <div class="tag-row">
+            <span class="tag">KPI</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Process</span>
+          </div>
         </div>
 
         <div class="card">
-          <div class="card-label">Project / Automation</div>
-          <h3>Portfolio Automation Hub</h3>
-          <p>A lightweight system for tracking blog ideas, project updates, resume versions, and content publishing workflows.</p>
+          <div class="card-label">Project / Portfolio Automation System</div>
+          <h3>Automation Hub</h3>
+
+          <div class="mini-title">Problem</div>
+          <p>Portfolio updates, content ideas, resume versions, and project progress can become scattered without a system.</p>
+
+          <div class="mini-title">System</div>
+          <p>A lightweight workflow to manage portfolio updates, field notes, project improvements, and publishing tasks.</p>
+
+          <div class="mini-title">Output</div>
+          <p>A living professional portfolio that can be maintained like an operational system.</p>
+
+          <div class="tag-row">
+            <span class="tag">GitHub</span>
+            <span class="tag">Notion</span>
+            <span class="tag">AI</span>
+            <span class="tag">Automation</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="divider-mid"></div>
+    <section id="notes">
+      <div class="divider-mid"></div>
 
-    <section id="blog">
-      <div class="label">Field Notes / Blog</div>
-      <h2 class="section-title">Writing in Public</h2>
+      <div class="label">Field Notes / Thinking in Public</div>
+      <h2 class="section-title">Short notes, not separate blog pages.</h2>
 
-      <div class="grid">
+      <div class="grid three">
         <div class="card">
-          <div class="card-label">Blog / Portfolio Build</div>
-          <h3>Why I’m Building This Portfolio</h3>
-          <p>Supply chain work is often invisible until something breaks. This portfolio documents the systems, dashboards, and thinking behind operational clarity.</p>
+          <div class="card-label">Note / Visibility</div>
+          <h3>Why Visibility Matters</h3>
+          <p>Supply chain issues often become expensive because teams see them too late. Visibility gives teams time to act.</p>
         </div>
 
         <div class="card">
-          <div class="card-label">Blog / Logistics Data</div>
-          <h3>How Data Improves Logistics Visibility</h3>
-          <p>A short note on shipment delays, inventory movement, warehouse flow, and how dashboards improve decision-making.</p>
+          <div class="card-label">Note / Dashboards</div>
+          <h3>Dashboard Thinking</h3>
+          <p>A dashboard is not just a chart. It is a decision layer that should show what is happening, why it matters, and what needs attention.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Note / Automation</div>
+          <h3>Less Manual Follow-Up</h3>
+          <p>Automation is not about replacing operational judgment. It is about reducing repetitive work so people can focus on exceptions.</p>
         </div>
       </div>
     </section>
-
-    <div class="divider-mid"></div>
 
     <section id="vision">
-      <div class="label">Vision Board / Career Architecture</div>
+      <div class="divider-mid"></div>
+
+      <div class="label">Career Architecture / Vision Board</div>
       <h2 class="section-title">The next phase is intentional.</h2>
 
       <div class="body-block">
         <p>
           My career direction is focused on <strong>supply chain analytics, logistics planning,
-          operations improvement, automation, and global execution systems</strong>.
+          operations improvement, SAP workflows, automation, and global execution systems</strong>.
         </p>
       </div>
 
       <div class="grid">
         <div class="card">
           <div class="card-label">Target Roles</div>
-          <h3>Supply Chain Analyst</h3>
-          <p>Logistics Analyst, Inventory Analyst, Replenishment Analyst, Operations Analyst, SAP Supply Chain Consultant.</p>
+          <h3>Analyst Track</h3>
+          <p>Supply Chain Analyst, Logistics Analyst, Inventory Analyst, Replenishment Analyst, Operations Analyst, SAP Supply Chain Consultant.</p>
         </div>
 
         <div class="card">
           <div class="card-label">Target Markets</div>
           <h3>Canada / India / Europe</h3>
-          <p>Focused on roles across Canada, India, Netherlands, and broader European supply chain ecosystems.</p>
+          <p>Focused on roles across Canada, India, the Netherlands, and broader European supply chain ecosystems.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Skill Direction</div>
+          <h3>Data + Systems</h3>
+          <p>Power BI, SQL, SAP S/4HANA, Excel automation, dashboard design, process documentation, and AI-assisted workflows.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">12-Month Build</div>
+          <h3>Portfolio as Proof</h3>
+          <p>Build case studies, dashboard concepts, operational writing, automation workflows, and a stronger public professional identity.</p>
         </div>
       </div>
     </section>
 
-    <div class="divider-mid"></div>
-
     <section id="contact">
+      <div class="divider-mid"></div>
+
       <div class="label">Contact / Connect</div>
       <h2 class="section-title">Let’s build operational visibility.</h2>
 
-      <div class="body-block">
+      <div class="contact-box">
+        <p>
+          Email:
+          <strong>
+            <a href="mailto:aditya.bobde@gmail.com">aditya.bobde@gmail.com</a>
+          </strong>
         </p>
-          LinkedIn: <strong>https://www.linkedin.com/in/adityabobde/</strong>
+
+        <p>
+          LinkedIn:
+          <strong>
+            <a href="https://www.linkedin.com/in/adityabobde/" target="_blank">linkedin.com/in/adityabobde</a>
+          </strong>
+        </p>
+
+        <p>
+          Portfolio Focus:
+          <strong>Supply Chain Analytics / Logistics Visibility / Operations Automation</strong>
         </p>
       </div>
     </section>
 
     <footer class="footer">
-      © 2026 Aditya Bobde. Supply Chain Portfolio.
+      <span>© 2026 Aditya Bobde. Supply Chain Analytics Portfolio.</span>
+      <span>Built with GitHub Pages.</span>
     </footer>
 
   </main>
